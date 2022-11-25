@@ -1,0 +1,155 @@
+*{
+    margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/*HEADER
+A Header é a mãe de todo o conteúdo que está dentro dela.
+-imagem de logo
+-o título vai na web
+-nav
+*/
+
+/*NAV
+A Nav é a mãe da minha UL
+*/
+
+/*UL
+A UL pe a mãe da minha LI
+*/
+
+header{
+    /* height: 40vh; */
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;  /*Todo o conteúdo (filhos: logo, título e nav) tenham um espaçamento na horizontal*/
+    align-items: center;
+}
+
+.logo{
+  
+    border-radius: 50%;
+}
+
+nav{
+    width:30% ;
+    background-color: aquamarine;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: solid red;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    border: solid blue;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/*RESPONSIVO - MOBILE*/
+@media(min-width: 201px) and (max-width: 500px){
+
+   header{
+       display:flex;
+       flex-direction: column;
+       background-color: orange;
+   }
+
+   .logo{
+       width: 50%;
+   }
+
+   nav{
+       background-color: transparent;
+   }
+
+   ul{
+       display: flex;
+       flex-direction: column-reverse;
+       border: none;
+   }
+
+   li{
+       border: none;
+       color: white;
+       font-size: 1.5rem;
+   }
+
+.galeria{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+   .imgGaleria{
+      margin-top: 1rem ; 
+   }
+}
+
+/*RESPONSIVO - DESKTOP*/
+
+@media (min-width: 1501px) and (max-width: 1800px){
+    header{
+        height: 30vh;
+        background-color: blue;
+        display: flex;
+        justify-content: space-around; 
+    }
+    
+    .logo{
+        border-radius: 50%;
+    }
+
+    h1{
+        color: orange;
+        font-size: 2rem;
+    }
+    
+    nav{
+        width:50% ;
+        background-color: transparent;
+    }
+    
+    ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        border: none;
+        align-items: center;
+    }
+    
+    li{
+        list-style: none;
+        border: solid blue;
+        font-weight: 600;
+        font-size: 2rem;
+        /* opacity: 0.7; 
+        Opacidade vai do 0 até 1 ex: 0.1, 0.2*/
+    }
+
+    .galeria{
+        /* height: 40vh; */
+        background-color: orange;
+        display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+        padding: 1rem;
+    }
+    
+       .imgGaleria{
+          /* width: 20%; 
+          height: 25vh; */
+
+          width: 550px; 
+          height: 350px;
+          margin-top: 1rem
+       }
+
+
+}
